@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="560" viewBox="0 0 1180 560" role="img" aria-labelledby="title desc">
+  <title id="title">Summit Sequence connected parts</title>
+  <desc id="desc">A block diagram showing the route menu, climbing screen, rules engine, and account and save service connected by selected route, player moves, game state, and saved progress.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1f2937"/></marker>
+    <style>text{font-family:Arial,sans-serif;fill:#111827}.heading{font-size:21px;font-weight:700}.body{font-size:15px}.block{fill:#f8fafc;stroke:#1f2937;stroke-width:2.5}.accent{fill:#e0f2fe;stroke:#0369a1;stroke-width:2.5}.save{fill:#dcfce7;stroke:#166534;stroke-width:2.5}.arrow{fill:none;stroke:#1f2937;stroke-width:2.5;marker-end:url(#arrow)}.label{font-size:14px;font-weight:700;fill:#334155}</style>
+  </defs>
+  <rect width="1180" height="560" fill="white"/>
+  <text x="590" y="42" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#111827">Summit Sequence Connected Parts</text>
+  <rect class="block" x="65" y="130" width="225" height="150" rx="14"/>
+  <text class="heading" x="177" y="168" text-anchor="middle">Route Menu</text>
+  <text class="body" x="177" y="198" text-anchor="middle">search and filters</text><text class="body" x="177" y="222" text-anchor="middle">likes and route cards</text><text class="body" x="177" y="246" text-anchor="middle">starts selected route</text>
+  <rect class="accent" x="390" y="130" width="225" height="150" rx="14"/>
+  <text class="heading" x="502" y="168" text-anchor="middle">Climbing Screen</text>
+  <text class="body" x="502" y="198" text-anchor="middle">3D wall and camera</text><text class="body" x="502" y="222" text-anchor="middle">limb selection</text><text class="body" x="502" y="246" text-anchor="middle">stamina and messages</text>
+  <rect class="block" x="715" y="130" width="225" height="150" rx="14"/>
+  <text class="heading" x="827" y="168" text-anchor="middle">Rules Engine</text>
+  <text class="body" x="827" y="198" text-anchor="middle">validates reach</text><text class="body" x="827" y="222" text-anchor="middle">calculates stamina</text><text class="body" x="827" y="246" text-anchor="middle">checks rest and finish</text>
+  <rect class="save" x="390" y="370" width="225" height="130" rx="14"/>
+  <text class="heading" x="502" y="408" text-anchor="middle">Account and Save</text>
+  <text class="body" x="502" y="438" text-anchor="middle">statistics and ascent data</text><text class="body" x="502" y="462" text-anchor="middle">localStorage restore</text>
+  <path class="arrow" d="M290 185H390"/><text class="label" x="340" y="174" text-anchor="middle">route ID</text>
+  <path class="arrow" d="M615 185H715"/><text class="label" x="665" y="174" text-anchor="middle">limb move</text>
+  <path class="arrow" d="M715 235H615"/><text class="label" x="665" y="255" text-anchor="middle">valid move, state, message</text>
+  <path class="arrow" d="M827 280V350H615V370"/><text class="label" x="735" y="340" text-anchor="middle">ascent result</text>
+  <path class="arrow" d="M390 435H177V280"/><text class="label" x="266" y="423" text-anchor="middle">likes and completion state</text>
+  <path class="arrow" d="M502 370V280"/><text class="label" x="555" y="334">saved progress</text>
+  <text class="body" x="827" y="410" text-anchor="middle">Built in route data supplies</text><text class="body" x="827" y="434" text-anchor="middle">hold coordinates, difficulty,</text><text class="body" x="827" y="458" text-anchor="middle">rest holds, and finish holds.</text>
+</svg>
