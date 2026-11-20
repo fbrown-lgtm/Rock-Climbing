@@ -3,7 +3,7 @@
   <desc id="desc">A flowchart showing route selection, valid and invalid limb moves, resting, completing a climb, saving progress, and reopening the game.</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1f2937"/></marker>
-    <style>text{font-family:Arial,sans-serif;fill:#111827} .label{font-size:16px;font-weight:700}.small{font-size:14px}.box{fill:#f8fafc;stroke:#1f2937;stroke-width:2}.good{fill:#dcfce7;stroke:#166534;stroke-width:2}.bad{fill:#fee2e2;stroke:#b91c1c;stroke-width:2}.decision{fill:#fef3c7;stroke:#92400e;stroke-width:2}.arrow{fill:none;stroke:#1f2937;stroke-width:2.5;marker-end:url(#arrow)}.dashed{fill:none;stroke:#475569;stroke-width:2.5;stroke-dasharray:8 6;marker-end:url(#arrow)}</style>
+    <style>text{font-family:Arial,sans-serif;fill:#111827} .label{font-size:16px;font-weight:700}.small{font-size:14px}.box{fill:#f8fafc;stroke:#1f2937;stroke-width:2}.good{fill:#dcfce7;stroke:#166534;stroke-width:2}.bad{fill:#fee2e2;stroke:#b91c1c;stroke-width:2}.decision{fill:#fef3c7;stroke:#92400e;stroke-width:2}.arrow{fill:none;stroke:#1f2937;stroke-width:2.5;marker-end:url(#arrow)}.line{fill:none;stroke:#1f2937;stroke-width:2.5}.dashed{fill:none;stroke:#475569;stroke-width:2.5;stroke-dasharray:8 6;marker-end:url(#arrow)}</style>
   </defs>
   <rect width="1180" height="700" fill="white"/>
   <text x="590" y="40" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#111827">Summit Sequence User Flow</text>
@@ -15,21 +15,28 @@
   <text class="label" x="632" y="118" text-anchor="middle">Select a limb</text><text class="small" x="632" y="140" text-anchor="middle">reachable holds highlight</text>
   <path class="arrow" d="M230 124H300"/><path class="arrow" d="M475 124H545"/>
   <polygon class="decision" points="632,205 747,270 632,335 517,270"/>
-  <text class="label" x="632" y="264" text-anchor="middle">Hold reachable</text><text class="small" x="632" y="286" text-anchor="middle">and enough stamina?</text>
+  <text class="label" x="632" y="264" text-anchor="middle">Hold reachable</text><text class="small" x="632" y="286" text-anchor="middle">and enough stamina</text>
   <path class="arrow" d="M632 158V205"/>
   <rect class="bad" x="850" y="236" width="230" height="68" rx="10"/>
   <text class="label" x="965" y="264" text-anchor="middle">Show error</text><text class="small" x="965" y="286" text-anchor="middle">keep state unchanged</text>
   <path class="arrow" d="M747 270H850"/><text class="small" x="790" y="258">No</text>
-  <path class="arrow" d="M965 304V382H632V335"/><text class="small" x="780" y="372">choose another hold</text>
+  <path class="arrow" d="M965 236V124H720"/><text class="small" x="842" y="150" text-anchor="middle">choose another limb</text>
   <rect class="good" x="545" y="390" width="175" height="68" rx="10"/>
-  <text class="label" x="632" y="418" text-anchor="middle">Move limb</text><text class="small" x="632" y="440" text-anchor="middle">rest restores stamina</text>
+  <rect class="good" x="257.5" y="236" width="175" height="68" rx="10"/>
+  <text class="label" x="632" y="421" text-anchor="middle">Move limb</text><text class="small" x="632" y="443" text-anchor="middle">Go to next position</text>
   <path class="arrow" d="M632 335V390"/><text class="small" x="645" y="366">Yes</text>
   <polygon class="decision" points="632,505 742,565 632,625 522,565"/>
-  <text class="label" x="632" y="560" text-anchor="middle">Finish hold reached?</text><text class="small" x="632" y="582" text-anchor="middle">either hand</text>
+  <polygon class="decision" points="345,364 455,424 345,484 235,424"/>
+  <text class="label" x="632" y="560" text-anchor="middle">Finish hold reached</text><text class="small" x="632" y="582" text-anchor="middle">either hand</text>
   <path class="arrow" d="M632 458V505"/>
   <rect class="good" x="870" y="531" width="230" height="68" rx="10"/>
   <text class="label" x="985" y="559" text-anchor="middle">Save ascent</text><text class="small" x="985" y="581" text-anchor="middle">update account and menu</text>
   <path class="arrow" d="M742 565H870"/><text class="small" x="795" y="552">Yes</text>
-  <path class="arrow" d="M522 565H345V182H632V158"/><text class="small" x="430" y="552">No</text>
+  <path class="arrow" d="M522 565H345V484"/><text class="small" x="425" y="552">No</text>
+  <path class="arrow" d="M345 364V304"/><text class="small" x="357" y="340">Yes</text>
+  <path class="line" d="M345 236V182H500V124"/>
+  <path class="arrow" d="M455 424H500V182"/><text class="small" x="470" y="303">No</text>
+  <text class="label" x="345" y="424" text-anchor="middle">Resting</text><text class="small" x="345" y="446" text-anchor="middle">Climber Resting</text>
+  <text class="label" x="345" y="268" text-anchor="middle">Gain stamina</text><text class="small" x="345" y="290" text-anchor="middle">Restore amount of stamina</text>
   <path class="dashed" d="M985 599V660H142V158"/><text class="small" x="540" y="682">close and reopen: restore saved likes, ascents, and statistics</text>
 </svg>

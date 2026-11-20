@@ -24,7 +24,7 @@ The player starts the 5.12 route, selects a limb, and moves it to a reachable ho
 
 After completing a 5.12 climb, the player opens **Account** from the menu. The screen udate to show one added to the 5.12 ascent and total ascent count and the completed route. After reopening the game, the same statistics are still shown.
 
-## Acceptance checks
+## Step by step checks
 
 | Check | Starting state | Exact actions | Pass result |
 |---|---|---|---|
@@ -47,9 +47,9 @@ I will use **Codex** as the AI coding assistant and build the game with **HTML, 
 
 | Phase | Target checkpoint | Working behavior to show | Ready check | Dependencies and deferrals |
 |---|---|---|---|---|
-| Check the biggest risk | 3D movement experiment | One limb can move only to highlighted 3D holds; the camera rotates; stamina changes once per move | Try a valid nearby hold and an invalid distant hold from two camera angles | This must work first. Detailed character animation can wait. |
+| Check the biggest risk | 3D movement experiment | One limb can move only to Useable 3D holds; the camera rotates; stamina changes every move | Try a valid nearby hold and an invalid distant hold from two camera angles | This must work first. Detailed character animation can wait. |
 | Build the prototype | One complete 3D beginner route | Start a route, move all limbs, reach a finish hold, and see a completion screen | Run W1 and W2 on the one route | Depends on route data, camera controls, and movement rules. Filters and account data can wait. |
-| Add and test improvements | Menu, filters, likes, rests, and account screen | Search/filter routes, like a route, recover stamina at a rest, and view statistics | Run the related parts of W1-W3 after each improvement | Depends on a reliable completion result. More than three routes can wait. |
+| Add and test improvements | Menu, filters, likes, and account screen | Search/filter routes, like a route, recover stamina at a rest, and view statistics | Run the related parts of W1-W3 after each improvement | Depends on a reliable completion result. More than three routes can wait. |
 | Save and validate | Local saved progress | Likes, completed routes, and statistics survive a restart | Run W4 and W5; have a classmate complete a route without coaching | Depends on stable data fields. Achievements and sound can wait. |
 
 ## AI change and test process
@@ -65,6 +65,6 @@ For each AI-assisted change, I will describe one behavior and the expected resul
 
 ## Repository and review materials
 
-Repository link: _Add the repository URL before the class review._
+Repository link: https://github.com/fbrown-lgtm/Rock-Climbing
 
 The plain-English design is in [design.md](design.md). The two diagrams for the review are in [diagrams](diagrams/).
